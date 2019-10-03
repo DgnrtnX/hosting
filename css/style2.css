@@ -1,0 +1,493 @@
+a {
+  outline: none;
+}
+.section {
+  position: relative;
+  height: 100vh;
+}
+
+.section .section-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+#booking {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("../img/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#booking::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.booking-form {
+  max-width: 642px;
+  width: 100%;
+  margin: auto;
+  opacity: 0.8;
+}
+
+.booking-form .form-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.booking-form .form-header h1 {
+  font-size: 58px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #ffc001;
+  margin: 0px;
+}
+
+.booking-form > form {
+  background-color: #101113;
+  padding: 30px 20px;
+  border-radius: 3px;
+}
+
+.booking-form .form-group {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.booking-form .form-control {
+  background-color: #f5f5f5;
+  border: none;
+  height: 45px;
+  border-radius: 3px;
+  box-shadow: none;
+  font-weight: 400;
+  color: #101113;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+  color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+  color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form .form-control::placeholder {
+  color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form input[type="date"].form-control:invalid {
+  color: rgba(16, 17, 19, 0.3);
+}
+
+.booking-form select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.booking-form select.form-control + .select-arrow {
+  position: absolute;
+  right: 0px;
+  bottom: 6px;
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: #101113;
+  font-size: 14px;
+}
+
+.booking-form select.form-control + .select-arrow:after {
+  content: "\279C";
+  display: block;
+  transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 5px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.booking-form .submit-btn {
+  color: #101113;
+  background-color: #ffc001;
+  font-weight: 700;
+  height: 50px;
+  border: none;
+  width: 100%;
+  display: block;
+  border-radius: 3px;
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+/* main css */
+
+textarea {
+  letter-spacing: 0.025em;
+}
+
+@media screen and (max-width: 1680px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 14pt;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 11pt;
+  }
+}
+
+.major p {
+  margin: 0 0 2em 0;
+}
+
+.major h3 {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.65;
+  font-size: 1.35em;
+  margin: 0 0 1em 0;
+}
+
+.major a {
+  color: inherit;
+  border-bottom: 0;
+}
+
+/* Tiles */
+
+.tiles {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 0 !important;
+}
+
+.tiles + * {
+  border-top: 0 !important;
+}
+
+.tiles article {
+  align-items: center;
+  display: flex;
+  transition: transform 0.25s ease, opacity 0.25s ease, filter 1s ease,
+    -webkit-filter 1s ease;
+  padding: 4em 4em 2em 4em;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: default;
+  height: 40vh;
+  max-height: 40em;
+  min-height: 23em;
+  overflow: hidden;
+  position: relative;
+  width: 40%;
+}
+
+.tiles article .image {
+  display: none;
+}
+
+.tiles article header {
+  position: relative;
+  z-index: 3;
+}
+
+.tiles article h3 {
+  font-size: 1.75em;
+}
+
+.tiles article h3 a:hover {
+  color: inherit !important;
+}
+
+.tiles article:before {
+  transition: opacity 0.5s ease;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+.tiles article:after {
+  background-color: rgba(36, 41, 67, 0.25);
+  content: "";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.tiles article:hover:before {
+  opacity: 0;
+}
+
+.tiles article.is-transitioning {
+  transform: scale(0.95);
+  filter: blur(0.5em);
+  opacity: 0;
+}
+
+.tiles article:nth-child(4n - 1),
+.tiles article:nth-child(4n - 2) {
+  width: 60%;
+}
+
+.tiles article:nth-child(6n - 5):before {
+  background-color: #6fc3df;
+}
+
+.tiles article:nth-child(6n - 4):before {
+  background-color: #8d82c4;
+}
+
+.tiles article:nth-child(6n - 3):before {
+  background-color: #ec8d81;
+}
+
+.tiles article:nth-child(6n - 2):before {
+  background-color: #e7b788;
+}
+
+.tiles article:nth-child(6n - 1):before {
+  background-color: #8ea9e8;
+}
+
+.tiles article:nth-child(6n):before {
+  background-color: #87c5a4;
+}
+
+@media screen and (max-width: 1280px) {
+  .tiles article {
+    padding: 4em 3em 2em 3em;
+    height: 30vh;
+    max-height: 30em;
+    min-height: 20em;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .tiles article {
+    width: 50% !important;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .tiles article {
+    padding: 3em 1.5em 1em 1.5em;
+    height: 16em;
+    max-height: none;
+    min-height: 0;
+  }
+
+  .tiles article h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tiles {
+    display: block;
+  }
+
+  .tiles article {
+    height: 20em;
+    width: 100% !important;
+  }
+}
+
+/* Header */
+
+#header {
+  display: flex;
+  background-color: #2a2f4a;
+  box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
+  cursor: default;
+  font-weight: 600;
+  height: 3.25em;
+  left: 0;
+  letter-spacing: 0.25em;
+  line-height: 3.25em;
+  margin: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+}
+
+#header .logo {
+  border: 0;
+  display: inline-block;
+  font-size: 0.8em;
+  height: inherit;
+  line-height: inherit;
+  padding: 0 1.5em;
+}
+
+#header .logo strong {
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: #ffffff;
+  color: #242943;
+  display: inline-block;
+  line-height: 1.65em;
+  margin-right: 0.325em;
+  padding: 0 0.125em 0 0.375em;
+}
+
+#header .logo:hover strong {
+  background-color: #9bf1ff;
+}
+
+#header .logo:active strong {
+  background-color: #53e3fb;
+}
+#header nav {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  height: inherit;
+  line-height: inherit;
+}
+
+#header .logo {
+  padding: 0 1em;
+}
+
+#header nav a {
+  padding: 0 0.5em;
+}
+
+#header nav a:last-child {
+  padding-right: 1em;
+}
+
+#header nav a[href="#menu"] {
+  padding-right: 3.25em !important;
+}
+
+#header nav a[href="#menu"]:before,
+#header nav a[href="#menu"]:after {
+  right: 0.75em;
+}
+
+#header nav a[href="#menu"]:last-child {
+  padding-right: 4em !important;
+}
+
+#header nav a[href="#menu"]:last-child:before,
+#header nav a[href="#menu"]:last-child:after {
+  right: 1.5em;
+}
+
+@media screen and (max-width: 480px) {
+  #header .logo span {
+    display: none;
+  }
+
+  #header nav a[href="#menu"] {
+    overflow: hidden;
+    padding-right: 0 !important;
+    text-indent: 5em;
+    white-space: nowrap;
+    width: 5em;
+  }
+
+  #header nav a[href="#menu"]:before,
+  #header nav a[href="#menu"]:after {
+    right: 0;
+    width: inherit;
+  }
+
+  #header nav a[href="#menu"]:last-child:before,
+  #header nav a[href="#menu"]:last-child:after {
+    width: 4em;
+    right: 0;
+  }
+}
+
+/* Wrapper */
+
+#wrapper {
+  transition: filter 0.35s ease, -webkit-filter 0.35s ease,
+    opacity 0.375s ease-out;
+}
+
+#wrapper.is-transitioning {
+  opacity: 0;
+}
+
+#wrapper > * > .inner {
+  padding: 4em 0 2em 0;
+  margin: 0 auto;
+  max-width: 65em;
+  width: calc(100% - 6em);
+}
+
+@media screen and (max-width: 736px) {
+  #wrapper > * > .inner {
+    padding: 3em 0 1em 0;
+    width: calc(100% - 3em);
+  }
+}
+
+@media screen and (max-width: 736px) {
+  #wrapper {
+    padding-top: 2.75em;
+  }
+}
+.header1 {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: -62px;
+}
+
+.desccolor {
+  color: beige;
+}
+
+.tiles article .link.primary {
+  border: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: -40px;
+  width: 100%;
+  z-index: 4;
+  text-decoration: none;
+}
