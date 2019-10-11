@@ -21,7 +21,7 @@
         <!-- header starts here -->
         <header class="header">
 
-            <a class="user-logo-nav" href="index.php">IN</a>
+            <a class="user-logo-nav" href="index.html">IN</a>
 
             <!-- user navbar  -->
             <nav class="user-nav">
@@ -29,9 +29,9 @@
                 <!--content/usrnav-->
                 <ul class="user-nav__menu">
 
-                    <li> <a href="gallery.php">gallery</a> </li>
-                    <li> <a href="about.php">about</a> </li>
-                    <li class="last"><a href="team.php">team</a></li>
+                    <li> <a href="gallery.html">gallery</a> </li>
+                    <li> <a href="about.html">about</a> </li>
+                    <li class="last"><a href="team.html">team</a></li>
                     <li>
                     <?php
                         if(isset($_SESSION['userId'])){
@@ -44,7 +44,7 @@
                         </a>';
                         }
                         else{
-                            echo '<a href="login.php" class="sign-btn" style=" color: #da006d;">
+                            echo '<a href="login.html" class="sign-btn" style=" color: #da006d;">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -78,7 +78,7 @@
                         <span class="pri-head-main">feel</span>
                         <span class="pri-head-sub">the best in the world</span>
                     </h1>
-                    <a href="nearyou.php" class="btn btn--white btn-animated">Near You</a>
+                    <a href="nearyou.html" class="btn btn--white btn-animated">Near You</a>
                 </div>
                 <!-- txt and button end -->
 
@@ -202,10 +202,10 @@
                                 </div>
                                 <?php
                                 if(isset($_SESSION['userId'])){
-                                echo '<a href="booking.php"  class="btn btn--adpt">Book now!</a>';
+                                echo '<a href="booking.html"  class="btn btn--adpt">Book now!</a>';
                                 }
                                 else{
-                                    echo '<a href="login.php" class="btn btn--adpt">Book now!</a>';
+                                    echo '<a href="login.html" class="btn btn--adpt">Book now!</a>';
                                 }
                                 ?>    
                             </div>
@@ -242,10 +242,10 @@
                                     </div>
                                     <?php
                                     if(isset($_SESSION['userId'])){
-                                    echo '<a href="booking.php"  class="btn btn--adpt">Book now!</a>';
+                                    echo '<a href="booking.html"  class="btn btn--adpt">Book now!</a>';
                                     }
                                     else{
-                                    echo '<a href="login.php" class="btn btn--adpt">Book now!</a>';
+                                    echo '<a href="login.html" class="btn btn--adpt">Book now!</a>';
                                     }
                                     ?>
                                 </div>
@@ -282,10 +282,10 @@
                                     </div>
                                     <?php
                                     if(isset($_SESSION['userId'])){
-                                    echo '<a href="booking.php"  class="btn btn--adpt">Book now!</a>';
+                                    echo '<a href="booking.html"  class="btn btn--adpt">Book now!</a>';
                                     }
                                     else{
-                                    echo '<a href="login.php" class="btn btn--adpt">Book now!</a>';
+                                    echo '<a href="login.html" class="btn btn--adpt">Book now!</a>';
                                     }
                                     ?>
                                 </div>
@@ -295,14 +295,14 @@
                 </div>
 
                 <div class="u-center-text u-margin-top-huge">
-                    <a href="nearyou.php" class="btn btn--pink">Discover our hotels</a>
+                    <a href="nearyou.html" class="btn btn--pink">Discover our hotels</a>
                 </div>
             </section>
 
             <section class="section-book">
                 <div class="book">
                     <div class="book__form">
-                        <form action="includes/contact.inc.php" action="contact.php" class="form" method="post">
+                        <form action="includes/contact.inc.php" action="contact.html" class="form" method="post">
                             <div class="u-margin-bottom-medium">
                                 <h2 class="head-sec">
                                     Want to know more
