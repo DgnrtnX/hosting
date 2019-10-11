@@ -14,3 +14,4 @@ signInButton.addEventListener("click", () => {
 function review() {
   window.location.href = "review.html";
 }
+ 
