@@ -17,23 +17,7 @@
           <div class="form-container sign-up-container">
             <form action="includes/login.up.php" method="post">
               <h1>Create Account</h1>
-              <?php 
-              if(isset($_GET['error'])){
-                if($_GET['error']=="emptyfields"){
-                  echo '<p class="pr-glow">Fill In All Fields</p>';
-                }
-            
-                elseif($_GET['error']=="invalidname"){
-                  echo '<p class="pr-glow">Invalid Name</p>';
-                }
-                elseif($_GET['error']=="checkpassword"){
-                  echo '<p class="pr-glow">Check Password</p>';
-                }
-                elseif($_GET['error']=="usertaken"){
-                  echo '<p class="pr-glow">User Taken</p>';
-                }
-              }
-              ?>
+              
               <input type="text" name="Name" placeholder="Name" />
               <input type="email" name="Email" placeholder="Email" />
               <input type="password" name="Password" placeholder="Password" />
@@ -53,7 +37,7 @@
 
               <input type="email" name="email" placeholder="Email" />
               <input type="password" name="password" placeholder="Password" />
-              <!-- <a href="includes/login.res.php">Forgot your password?</a> -->
+              <a href="includes/login.res.php">Forgot your password?</a>
               <button type="submit" name="sign-in" class="submit">Sign In</button>
             </form>
           </div>
